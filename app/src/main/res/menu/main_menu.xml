@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/track"
+        android:orderInCategory="1000"
+        android:title="@string/text_track">
+        <menu>
+            <item
+                android:id="@+id/track_infinite"
+                android:orderInCategory="0"
+                android:title="@string/text_infinite" />
+            <item
+                android:id="@+id/track_square"
+                android:orderInCategory="1"
+                android:title="@string/text_square" />
+            <item
+                android:id="@+id/track_triangle"
+                android:orderInCategory="2"
+                android:title="@string/text_triangle" />
+            <item
+                android:id="@+id/track_circle"
+                android:orderInCategory="3"
+                android:title="@string/text_circle" />
+            <item
+                android:id="@+id/track_star"
+                android:orderInCategory="4"
+                android:title="@string/text_star" />
+            <item
+                android:id="@+id/track_diamond"
+                android:orderInCategory="5"
+                android:title="@string/text_diamond" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/interpolator"
+        android:orderInCategory="1000"
+        android:title="@string/text_interpolator">
+        <menu>
+            <item
+                android:id="@+id/interpolator_linear"
+                android:orderInCategory="100"
+                android:title="@string/text_linear" />
+            <item
+                android:id="@+id/interpolator_accelerate"
+                android:orderInCategory="100"
+                android:title="@string/text_accelerate" />
+            <item
+                android:id="@+id/interpolator_decelerate"
+                android:orderInCategory="100"
+                android:title="@string/text_decelerate" />
+            <item
+                android:id="@+id/interpolator_overshoot"
+                android:orderInCategory="100"
+                android:title="@string/text_overshoot" />
+            <item
+                android:id="@+id/interpolator_fast_out_slow_in"
+                android:orderInCategory="100"
+                android:title="@string/text_fast_out_slow_in" />
+        </menu>
+    </item>
+</menu>

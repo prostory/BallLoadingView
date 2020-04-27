@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="BallView">
+        <attr name="colors" format="reference" />
+        <attr name="ballSize" format="integer" />
+        <attr name="minRadius" format="dimension" />
+        <attr name="maxRadius" format="dimension" />
+        <attr name="rotateDuration" format="integer" />
+        <attr name="scaleDuration" format="integer"/>
+        <attr name="animationInterpolator" format="reference" />
+        <attr name="trackType" format="enum">
+            <enum name="infinite" value="0" />
+            <enum name="square" value="1" />
+            <enum name="triangle" value="2" />
+            <enum name="circle" value="3" />
+            <enum name="star" value="4" />
+            <enum name="diamond" value="5" />
+        </attr>
+    </declare-styleable>
+</resources>

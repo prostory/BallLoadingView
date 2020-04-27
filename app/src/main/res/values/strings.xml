@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">BallLoadingDemo</string>
+    <string name="text_ball_size">"Ball size: "</string>
+    <string name="text_min_radius">"Min radius: "</string>
+    <string name="text_max_radius">"Max radius: "</string>
+    <string name="text_rotate_duration">"Rotate duration: "</string>
+    <string name="text_scale_duration">"Scale duration: "</string>
+    <string name="text_interpolator">Interpolator</string>
+    <string name="text_track">Track</string>
+    <string name="text_infinite">Infinite</string>
+    <string name="text_square">Square</string>
+    <string name="text_triangle">Triangle</string>
+    <string name="text_circle">Circle</string>
+    <string name="text_star">Star</string>
+    <string name="text_diamond">Diamond</string>
+    <string name="text_linear">Linear</string>
+    <string name="text_accelerate">Accelerate</string>
+    <string name="text_decelerate">Decelerate</string>
+    <string name="text_overshoot">Overshoot</string>
+    <string name="text_fast_out_slow_in">Fast out slow in</string>
+</resources>
