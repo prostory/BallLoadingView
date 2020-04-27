@@ -14,9 +14,9 @@
         app:ballSize="5"
         app:minRadius="5dp"
         app:maxRadius="8dp"
-        app:rotateDuration="5000"
-        app:scaleDuration="2000"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:moveDuration="5000"
+        app:resizeDuration="2000"
+        app:layout_constraintBottom_toTopOf="@id/ballSize"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
