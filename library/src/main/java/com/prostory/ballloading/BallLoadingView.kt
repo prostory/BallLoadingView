@@ -48,8 +48,8 @@ class BallLoadingView @JvmOverloads constructor(
         val ballSize = attr.getInt(R.styleable.BallView_ballSize, colors.size)
         val minRadius = attr.getDimension(R.styleable.BallView_minRadius, 5.dp.toFloat())
         val maxRadius = attr.getDimension(R.styleable.BallView_maxRadius, minRadius)
-        val rotateDuration = attr.getInt(R.styleable.BallView_rotateDuration, 5000).toLong()
-        val scaleDuration = attr.getInt(R.styleable.BallView_scaleDuration, 2000).toLong()
+        val moveDuration = attr.getInt(R.styleable.BallView_moveDuration, 5000).toLong()
+        val resizeDuration = attr.getInt(R.styleable.BallView_resizeDuration, 2000).toLong()
         val interpolatorResId = attr.getResourceId(R.styleable.BallView_animationInterpolator, 0)
         val interpolator = if (interpolatorResId != 0) {
             AnimationUtils.loadInterpolator(context, interpolatorResId)
@@ -61,7 +61,7 @@ class BallLoadingView @JvmOverloads constructor(
 
         background = BallLoadingDrawable(
             colors, ballSize, minRadius, maxRadius,
-            rotateDuration, scaleDuration, interpolator, track
+            moveDuration, resizeDuration, interpolator, track
         )
         attr.recycle()
     }
@@ -90,22 +90,30 @@ class BallLoadingView @JvmOverloads constructor(
             loadingDrawable?.maxRadius = value
         }
 
-    var rotateDuration: Long
-        get() = loadingDrawable?.rotateDuration?: 0L
+    var moveDuration: Long
+        get() = loadingDrawable?.moveDuration?: 0L
         set(value) {
-            loadingDrawable?.rotateDuration = value
+            loadingDrawable?.moveDuration = value
         }
 
-    var scaleDuration: Long
-        get() = loadingDrawable?.scaleDuration?: 0L
+    var resizeDuration: Long
+        get() = loadingDrawable?.resizeDuration?: 0L
         set(value) {
-            loadingDrawable?.scaleDuration = value
+            loadingDrawable?.resizeDuration = value
         }
 
     var interpolator: Interpolator
         get() = loadingDrawable?.interpolator?: Interpolations.LINEAR
         set(value) {
             loadingDrawable?.interpolator = value
+        }
+
+    var track: RunningTrack?
+        get() = loadingDrawable?.track
+        set(value) {
+            value?.let {
+                loadingDrawable?.track = it
+            }
         }
 
     @RequiresApi(Build.VERSION_CODES.KITKAT)

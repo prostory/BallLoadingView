@@ -19,8 +19,8 @@ class MainActivity : AppCompatActivity() {
         ballSize.setProgress(loadingView.ballSize.toFloat())
         minRadius.setProgress(loadingView.minRadius.toDP)
         maxRadius.setProgress(loadingView.maxRadius.toDP)
-        rotateDuration.setProgress(loadingView.rotateDuration / 1000f)
-        scaleDuration.setProgress(loadingView.scaleDuration / 1000f)
+        moveDuration.setProgress(loadingView.moveDuration / 1000f)
+        resizeDuration.setProgress(loadingView.resizeDuration / 1000f)
 
         ballSize.withChangeAction { progress, _ ->
             loadingView.ballSize = progress
@@ -31,11 +31,11 @@ class MainActivity : AppCompatActivity() {
         maxRadius.withChangeAction { progress, _ ->
             loadingView.maxRadius = progress.dp.toFloat()
         }
-        rotateDuration.withChangeAction { _, progressFloat ->
-            loadingView.rotateDuration = (progressFloat * 1000).toLong()
+        moveDuration.withChangeAction { _, progressFloat ->
+            loadingView.moveDuration = (progressFloat * 1000).toLong()
         }
-        scaleDuration.withChangeAction { _, progressFloat ->
-            loadingView.rotateDuration = (progressFloat * 1000).toLong()
+        resizeDuration.withChangeAction { _, progressFloat ->
+            loadingView.resizeDuration = (progressFloat * 1000).toLong()
         }
     }
 

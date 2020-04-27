@@ -14,8 +14,8 @@ class BallLoadingDrawable(
     ballSize: Int = colors.size,
     minRadius: Float = 5.dp.toFloat(),
     maxRadius: Float = minRadius,
-    rotateDuration: Long = 5000,
-    scaleDuration: Long = 2000,
+    moveDuration: Long = 5000,
+    resizeDuration: Long = 2000,
     interpolator: Interpolator = Interpolations.LINEAR,
     track: RunningTrack = Infinite()
 ): Drawable() {
@@ -58,7 +58,7 @@ class BallLoadingDrawable(
             }
         }
 
-    var rotateDuration: Long = rotateDuration
+    var moveDuration: Long = moveDuration
         set(value) {
             if (value != field) {
                 field = value
@@ -66,7 +66,7 @@ class BallLoadingDrawable(
             }
         }
 
-    var scaleDuration: Long = scaleDuration
+    var resizeDuration: Long = resizeDuration
         set(value) {
             if (value != field) {
                 field = value
@@ -166,7 +166,7 @@ class BallLoadingDrawable(
                         invalidateSelf()
                     }
                 }
-                duration(rotateDuration)
+                duration(moveDuration)
                 repeat()
             }
         ).apply {
@@ -192,7 +192,7 @@ class BallLoadingDrawable(
                             invalidateSelf()
                         }
                     }
-                    duration(scaleDuration)
+                    duration(resizeDuration)
                     repeat()
                 })
             }

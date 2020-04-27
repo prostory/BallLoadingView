@@ -10,9 +10,6 @@
         android:id="@+id/loadingView"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:layout_gravity="center"
         app:colors="@array/loadingColors"
         app:ballSize="5"
         app:minRadius="5dp"
@@ -53,7 +50,7 @@
         app:bsb_show_thumb_text="true"
         app:bsb_track_color="@color/color_red_light"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/tagRotateDuration"
+        app:layout_constraintStart_toEndOf="@id/tagMoveDuration"
         app:layout_constraintBottom_toTopOf="@id/minRadius"/>
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -83,7 +80,7 @@
         app:bsb_show_thumb_text="true"
         app:bsb_track_color="@color/color_red_light"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/tagRotateDuration"
+        app:layout_constraintStart_toEndOf="@id/tagMoveDuration"
         app:layout_constraintBottom_toTopOf="@id/maxRadius"/>
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -114,19 +111,19 @@
         app:bsb_show_thumb_text="true"
         app:bsb_track_color="@color/color_red_light"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/tagRotateDuration"
-        app:layout_constraintBottom_toTopOf="@id/rotateDuration"/>
+        app:layout_constraintStart_toEndOf="@id/tagMoveDuration"
+        app:layout_constraintBottom_toTopOf="@id/moveDuration"/>
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tagRotateDuration"
+        android:id="@+id/tagMoveDuration"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:text="@string/text_rotate_duration"
+        android:text="@string/text_move_duration"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/rotateDuration" />
+        app:layout_constraintTop_toTopOf="@id/moveDuration" />
     <com.xw.repo.BubbleSeekBar
-        android:id="@+id/rotateDuration"
+        android:id="@+id/moveDuration"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -144,19 +141,19 @@
         app:bsb_show_thumb_text="true"
         app:bsb_track_color="@color/color_red_light"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/tagRotateDuration"
-        app:layout_constraintBottom_toTopOf="@id/scaleDuration"/>
+        app:layout_constraintStart_toEndOf="@id/tagMoveDuration"
+        app:layout_constraintBottom_toTopOf="@id/resizeDuration"/>
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tagScaleDuration"
+        android:id="@+id/tagResizeDuration"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:text="@string/text_scale_duration"
+        android:text="@string/text_resize_duration"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/scaleDuration"/>
+        app:layout_constraintTop_toTopOf="@id/resizeDuration"/>
     <com.xw.repo.BubbleSeekBar
-        android:id="@+id/scaleDuration"
+        android:id="@+id/resizeDuration"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -174,7 +171,7 @@
         app:bsb_show_thumb_text="true"
         app:bsb_track_color="@color/color_red_light"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/tagRotateDuration"
+        app:layout_constraintStart_toEndOf="@id/tagMoveDuration"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

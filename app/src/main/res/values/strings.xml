@@ -3,8 +3,8 @@
     <string name="text_ball_size">"Ball size: "</string>
     <string name="text_min_radius">"Min radius: "</string>
     <string name="text_max_radius">"Max radius: "</string>
-    <string name="text_rotate_duration">"Rotate duration: "</string>
-    <string name="text_scale_duration">"Scale duration: "</string>
+    <string name="text_move_duration">"move duration: "</string>
+    <string name="text_resize_duration">"Resize duration: "</string>
     <string name="text_interpolator">Interpolator</string>
     <string name="text_track">Track</string>
     <string name="text_infinite">Infinite</string>
