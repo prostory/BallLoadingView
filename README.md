@@ -23,7 +23,7 @@ Add it in your root build.gradle at the end of repositories:
 
 ```groovy
 	dependencies {
-	       implementation 'com.github.prostory:BallLoadingView:v1.0'
+	       implementation 'com.github.prostory:BallLoadingView:v1.1'
 	}
 ```
 
@@ -45,7 +45,7 @@ Add it in your root build.gradle at the end of repositories:
 ```xml
 <groupId>com.github.prostory</groupId>
 <artifactId>BallLoadingView</artifactId>
-<version>v1.0</version>
+<version>v1.1</version>
 ```
 
 ## How to use
