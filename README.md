@@ -134,3 +134,7 @@ loadingView.track = object: RunningTrack {
 ```
 
 The above code defines a small ball running track, let the ball move along an ellipse.
+
+I also provide an demo that can see the configuration effect in real time. You can adjust the configuration in the demo to achieve the loading animation effect you want.
+
+![demo](images/output.gif)
